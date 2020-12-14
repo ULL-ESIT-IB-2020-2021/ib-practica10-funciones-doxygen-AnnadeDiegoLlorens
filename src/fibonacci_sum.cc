@@ -52,18 +52,20 @@ void Usage(int argc, char *argv[]) {
 size_t fibonacci_sum(const size_t kLimit) {
   size_t second_to_last{0},  // Second to last term
            last{1},          // Last term generated
-           new_term;         // New term of the serie
-  size_t long sum{0};        // Accumulated sum of the terms
+           new_term,        // New term of the serie
+           num_of_sum{0}; 
+           long sum{0};        // Accumulated sum of the terms
 
   do {
     new_term = last + second_to_last;
+    second_to_last = last; 
+    last = new_term; 
     if (new_term % 2 == 0) {
-      sum += new_term;
+      sum = sum + new_term;
+      num_of_sum = 1+ num_of_sum; 
     }
     // Uncomment for debug: print each new term
     // std::cout << "Term: " << new_term << std::endl;
-    second_to_last = last;
-    last = new_term;
-  } while (new_term < kLimit);
+  } while (num_of_sum < kLimit);
 	return sum;
 }

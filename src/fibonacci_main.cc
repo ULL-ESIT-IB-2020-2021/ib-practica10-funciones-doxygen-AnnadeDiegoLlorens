@@ -14,6 +14,7 @@
  * @see stoi http://www.cplusplus.com/reference/string/stoi/
  * An Object Oriented Version of the program:
  * @see https://stackoverflow.com/questions/21360694/sum-of-even-fibonacci-numbers-under-1000
+ * Editado por Anna de Diego Llorens
  *
  */
 
